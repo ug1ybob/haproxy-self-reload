@@ -17,7 +17,7 @@ RUN clean-install \
   liblua5.3-0 \
   dumb-init
 
-RUN mkdir -p /etc/haproxy/errors /var/state/haproxy
+RUN mkdir -p /etc/haproxy/errors /var/state/haproxy /run/haproxy
 RUN for ERROR_CODE in 400 403 404 408 500 502 503 504;do curl -sSL -o /etc/haproxy/errors/$ERROR_CODE.http \
 	https://raw.githubusercontent.com/haproxy/haproxy-1.5/master/examples/errorfiles/$ERROR_CODE.http;done
 

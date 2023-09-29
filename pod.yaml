@@ -4,7 +4,7 @@ metadata:
   name: haproxy-self-reload
 spec:
   containers:
-  - image: aledbf/haproxy-self-reload:0.2
+  - image: ug1ybob/haproxy-self-reload:0.0.3
     name: haproxy
     ports:
     - containerPort: 80
